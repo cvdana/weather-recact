@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-
+import "./Weather.css";
 export default function Weather() {
   function handleResponse(response) {
     alert(`Temperature in London is ${response.data.main.temp}`);
@@ -19,6 +19,49 @@ export default function Weather() {
   };
   return (
     <div className="Weather">
+      <div className="row seekBlock">
+        <div className="col">
+          <img
+            className="location col"
+            src="https://lh3.googleusercontent.com/Zf2589f7DDySbVIowuI6qEwGnlnT4x4Ob6_QdTB906wqmwMnSzMemWszOwQ4DOwCzVA8pVnntOkLD_tQf2DhIQsHQOwf04t6LAejH3G8"
+            alt="location pin"
+          />
+        </div>
+        <div className="col-3">
+          <form action="submit" id="search-form">
+            <div className="p-1 bg-light rounded rounded-pill shadow-sm mb-1 searchBox">
+              <div className="input-group">
+                <input
+                  type="search"
+                  placeholder="Search City"
+                  aria-describedby="button-addon1"
+                  className="form-control border-0 bg-ligh searchBar"
+                />
+                <div className="input-group-append">
+                  <button
+                    id="button-addon1"
+                    type="submit"
+                    className="btn btn-link text-primary searchButton"
+                  >
+                    <img
+                      src="https://as2.ftcdn.net/v2/jpg/02/22/70/95/1000_F_222709537_FMNhSG7BKmU9QOrpdp7ubcRrnT26z5R4.jpg"
+                      alt="magnifying glass"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div className="col">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkFspT3qvVuwlqyCui0ufP_iTWFuxtMXxC2Q&usqp=CAU"
+            alt="refresh"
+            id="refresh"
+            onClick="location.reload()"
+          />
+        </div>
+      </div>
       <div className="info">
         <h1>{weatherData.city}</h1>
         <h2>{weatherData.date}</h2>
@@ -74,49 +117,6 @@ export default function Weather() {
       <div className="weatherForecast">
         <h4 className="dayForecast">7-Day Forecast</h4>
         <div className="forecast"></div>
-      </div>
-      <div className="row seekBlock">
-        <div className="col">
-          <img
-            className="location col"
-            src="https://lh3.googleusercontent.com/Zf2589f7DDySbVIowuI6qEwGnlnT4x4Ob6_QdTB906wqmwMnSzMemWszOwQ4DOwCzVA8pVnntOkLD_tQf2DhIQsHQOwf04t6LAejH3G8"
-            alt="location pin"
-          />
-        </div>
-        <div className="col-9">
-          <form action="submit" id="search-form">
-            <div className="p-1 bg-light rounded rounded-pill shadow-sm mb-1 searchBox">
-              <div className="input-group">
-                <input
-                  type="search"
-                  placeholder="Search City"
-                  aria-describedby="button-addon1"
-                  className="form-control border-0 bg-ligh searchBar"
-                />
-                <div className="input-group-append">
-                  <button
-                    id="button-addon1"
-                    type="submit"
-                    className="btn btn-link text-primary searchButton"
-                  >
-                    <img
-                      src="https://as2.ftcdn.net/v2/jpg/02/22/70/95/1000_F_222709537_FMNhSG7BKmU9QOrpdp7ubcRrnT26z5R4.jpg"
-                      alt="magnifying glass"
-                    />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div className="col">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkFspT3qvVuwlqyCui0ufP_iTWFuxtMXxC2Q&usqp=CAU"
-            alt="refresh"
-            id="refresh"
-            onClick="location.reload()"
-          />
-        </div>
       </div>
     </div>
   );

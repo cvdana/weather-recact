@@ -1,0 +1,127 @@
+.Weather .info {
+  padding: 12px 20px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.Weather h2 {
+  font-size: 20px;
+}
+.Weather h3 {
+  font-size: 90px;
+  padding: 0;
+  position: relative;
+  top: -136px;
+  left: 183px;
+}
+
+.Weather h3 small {
+  position: relative;
+  top: -45px;
+  right: 1px;
+  font-size: 25px;
+}
+.Weather h4.condition {
+  text-transform: capitalize;
+  position: relative;
+  top: -148px;
+  left: 177px;
+}
+.Weather h4.dayForecast {
+  font-size: 20px;
+  padding-left: 20px;
+}
+.Weather .box {
+  max-width: 400px;
+  max-height: 327px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.Weather .frame {
+  width: 160px;
+  height: 160px;
+  margin: 0;
+}
+.Weather .extraInformation {
+  position: relative;
+  top: -130px;
+  text-align: center;
+}
+.Weather .extraInformation img {
+  margin: 0 auto;
+}
+.Weather .thermometer {
+  height: 52px;
+  width: 68px;
+}
+.Weather .humidityIcon {
+  height: 52px;
+  width: 68px;
+}
+.Weather .windIcon {
+  height: 52px;
+  width: 68px;
+}
+.Weather .mainIcon {
+  display: inherit;
+  height: 140px;
+  width: 140px;
+  margin: 0 auto;
+  padding-top: 15px;
+}
+.Weather #weekly {
+  box-sizing: content-box;
+  width: 90%;
+  margin: 0 auto;
+}
+.Weather #weekly .rounded-pill {
+  height: 130px;
+  margin: 20px 5px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.Weather .icon {
+  width: 40px;
+  height: 40px;
+  margin: 10px auto;
+}
+
+.Weather .seekBlock .col,
+.seekBlock .col-9 {
+  padding: 0;
+}
+.Weather .searchBox {
+  margin: 0 20px;
+  background: #fff;
+}
+.Weather .searchBar {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background: none;
+  outline: none;
+  float: left;
+  color: #060606;
+  font-size: 16px;
+  line-height: 29px;
+}
+.Weather .searchButton img {
+  width: 25px;
+  position: relative;
+  bottom: 5px;
+}
+.Weather .location {
+  display: block;
+  height: 35px;
+  margin-left: 65px;
+}
+.Weather #refresh {
+  display: block;
+  height: 35px;
+  text-align: left;
+  transition: all 100ms ease;
+}
+.Weather #refresh:hover {
+  opacity: 40%;
+}
+
+.Weather hr {
+  color: #fff;
+}
