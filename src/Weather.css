@@ -90,7 +90,6 @@
 }
 .Weather .searchBox {
   margin: 0 20px;
-  background: #fff;
 }
 .Weather .searchBar {
   border-top-left-radius: 15px;
@@ -101,6 +100,8 @@
   color: #060606;
   font-size: 16px;
   line-height: 29px;
+  background-color: #fff;
+  border: #fff;
 }
 .Weather .searchButton img {
   width: 25px;

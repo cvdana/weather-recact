@@ -43,10 +43,7 @@ export default function Weather() {
                     type="submit"
                     className="btn btn-link text-primary searchButton"
                   >
-                    <img
-                      src="https://as2.ftcdn.net/v2/jpg/02/22/70/95/1000_F_222709537_FMNhSG7BKmU9QOrpdp7ubcRrnT26z5R4.jpg"
-                      alt="magnifying glass"
-                    />
+                    Search
                   </button>
                 </div>
               </div>
