@@ -1,6 +1,4 @@
 .Weather .info {
-  padding: 12px 20px;
-  margin-top: 50px;
   text-align: center;
 }
 
@@ -31,36 +29,13 @@
   font-size: 20px;
   padding-left: 20px;
 }
-.Weather .box {
-  max-width: 400px;
-  max-height: 327px;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-.Weather .frame {
-  width: 160px;
-  height: 160px;
-  margin: 0;
-}
+
 .Weather .extraInformation {
   position: relative;
   top: -130px;
   text-align: center;
 }
-.Weather .extraInformation img {
-  margin: 0 auto;
-}
-.Weather .thermometer {
-  height: 52px;
-  width: 68px;
-}
-.Weather .humidityIcon {
-  height: 52px;
-  width: 68px;
-}
-.Weather .windIcon {
-  height: 52px;
-  width: 68px;
-}
+
 .Weather .mainIcon {
   display: inherit;
   height: 140px;

@@ -63,8 +63,8 @@ export default function Weather() {
         <h1>{weatherData.city}</h1>
         <h2>{weatherData.date}</h2>
       </div>
-      <div className="border border-3 rounded-5 container weather box">
-        <div className="border border-3 border-top-0 rounded-circle frame">
+      <div className="weather box">
+        <div className=" frame">
           <img
             src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
             alt="sun"
@@ -73,41 +73,17 @@ export default function Weather() {
         </div>
         <h3>
           <span>{weatherData.temperature}</span>
-          <small className="units"> ºC </small>
+          <small className="units"> ºC | F </small>
         </h3>
         <h4 className="condition">{weatherData.condition}</h4>
         <div className="row row-cols-3 align-items-center extraInformation">
-          <img
-            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/084/173/original/temperature.png?1685729291"
-            alt="Thermometer"
-            className="col-4 thermometer"
-          />
-          <img
-            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/084/171/original/humidity.png?1685729217"
-            alt="Drop icon with percentage symbol inside"
-            className="col-4 humidityIcon"
-          />
-          <img
-            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/084/172/original/windy.png?1685729263"
-            alt="wind"
-            className="col-4 windIcon"
-          />
-          <div className="w-100"></div>
           <h4 className="col-4 p-0 temperatures">
-            Feels like <br />
-            {weatherData.temperatureFeel}
+            Feels like {weatherData.temperatureFeel}º
           </h4>
           <h4 className="col-4 p-0 humidity">
-            Humidity
-            <br />
-            {weatherData.humidity}%
+            Humidity {weatherData.humidity}%
           </h4>
-          <h4 className="col-4 p-0 wind">
-            {" "}
-            Wind
-            <br />
-            {weatherData.wind} Km/h
-          </h4>
+          <h4 className="col-4 p-0 wind"> Wind {weatherData.wind} Km/h</h4>
         </div>
       </div>
       <hr />
