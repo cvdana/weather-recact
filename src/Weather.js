@@ -2,12 +2,13 @@ import React from "react";
 import axios from "axios";
 import "./Weather.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+
 export default function Weather() {
   function handleResponse(response) {
     alert(`Temperature in London is ${response.data.main.temp}`);
   }
   let apiKey = `8944afa6845bd7c413a687258d3211ef`;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(handleResponse);
   let weatherData = {
     city: `Valencia`,
