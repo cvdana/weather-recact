@@ -7,6 +7,7 @@
 .Weather h3 {
   font-size: 90px;
   padding: 0;
+  margin: 0;
 }
 
 .Weather h3 small {
@@ -15,6 +16,12 @@
   right: 1px;
   font-size: 25px;
 }
+.Weather h4.details,
+.Weather h4.temperatures,
+.Weather h4.humidity,
+.Weather h4.wind {
+  font-size: 19px;
+}
 .Weather h4.condition {
   text-transform: capitalize;
 }
@@ -22,28 +29,25 @@
   font-size: 20px;
   padding-left: 20px;
 }
-
+.Weather .maintemp {
+  padding: 0;
+}
+.Weather .extraInformation {
+  padding: 12px 0;
+  text-align: left;
+}
 .Weather .mainIcon {
-  display: inherit;
-  height: 140px;
-  width: 140px;
+  display: block;
+  height: 160px;
+  width: 160px;
   margin: 0 auto;
-  padding-top: 15px;
+  padding-top: 10px;
 }
-.Weather #weekly {
-  box-sizing: content-box;
-  width: 90%;
-  margin: 0 auto;
-}
-.Weather #weekly .rounded-pill {
+
+.Weather .forecast {
   height: 130px;
   margin: 20px 5px;
   background-color: rgba(0, 0, 0, 0.2);
-}
-.Weather .icon {
-  width: 40px;
-  height: 40px;
-  margin: 10px auto;
 }
 
 .Weather .seekBlock {
@@ -85,4 +89,5 @@
 
 .Weather hr {
   color: #fff;
+  margin: 6px 0;
 }

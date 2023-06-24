@@ -20,7 +20,7 @@ export default function Weather() {
   };
   return (
     <div className="Weather">
-      <div className="row seekBlock">
+      <div className="row justify-content-center seekBlock">
         <div className="col-3">
           <img
             className="location col"
@@ -72,16 +72,18 @@ export default function Weather() {
             className="mainIcon"
           />
         </div>
-        <div className="row text-center justify-content-center">
-          <div className="col-6">
-            <h3 className="col-6">
+        <div className="row justify-content-center">
+          <div className="col-4 text-center maintemp">
+            <h3 className="col">
               <span>{weatherData.temperature}</span>
               <small className="units"> ºC | F </small>
             </h3>
             <div className="w-100"></div>
-            <h4 className="col-6 condition">{weatherData.condition}</h4>
+            <h4 className="col condition">{weatherData.condition}</h4>
           </div>
           <div className=" col-3 extraInformation">
+            <h4 className="details">DETAILS</h4>
+            <hr />
             <h4 className="temperatures">
               Feels like {weatherData.temperatureFeel}º
             </h4>
@@ -93,7 +95,15 @@ export default function Weather() {
       <hr />
       <div className="weatherForecast">
         <h4 className="dayForecast">7-Day Forecast</h4>
-        <div className="forecast"></div>
+        <div className="row">
+          <div className="col rounded-pill forecast"></div>
+          <div className="col rounded-pill forecast"></div>
+          <div className="col rounded-pill forecast"></div>
+          <div className="col rounded-pill forecast"></div>
+          <div className="col rounded-pill forecast"></div>
+          <div className="col rounded-pill forecast"></div>
+          <div className="col rounded-pill forecast"></div>
+        </div>
       </div>
     </div>
   );
