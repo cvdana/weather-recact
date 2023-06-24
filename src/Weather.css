@@ -44,12 +44,6 @@
   padding-top: 10px;
 }
 
-.Weather .forecast {
-  height: 130px;
-  margin: 20px 5px;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
 .Weather .seekBlock {
   margin-top: 10px;
 }
@@ -74,17 +68,15 @@
 }
 .Weather .location {
   display: block;
-  height: 35px;
-  margin-left: 65px;
+  text-align: right;
 }
-.Weather #refresh {
+.Weather .refresh {
   display: block;
-  height: 35px;
-  text-align: left;
   transition: all 100ms ease;
 }
-.Weather #refresh:hover {
+.Weather .refresh:hover {
   opacity: 40%;
+  cursor: pointer;
 }
 
 .Weather hr {

@@ -22,13 +22,7 @@ export default function Weather() {
   return (
     <div className="Weather">
       <div className="row justify-content-center seekBlock">
-        <div className="col-3">
-          <img
-            className="location col"
-            src="https://lh3.googleusercontent.com/Zf2589f7DDySbVIowuI6qEwGnlnT4x4Ob6_QdTB906wqmwMnSzMemWszOwQ4DOwCzVA8pVnntOkLD_tQf2DhIQsHQOwf04t6LAejH3G8"
-            alt="location"
-          />
-        </div>
+        <div className="col-3 location">📍</div>
         <div className="col-6">
           <form action="submit" id="search-form">
             <div className="p-1 bg-light rounded rounded-pill shadow-sm mb-1 searchBox">
@@ -52,13 +46,11 @@ export default function Weather() {
             </div>
           </form>
         </div>
-        <div className="col-3">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkFspT3qvVuwlqyCui0ufP_iTWFuxtMXxC2Q&usqp=CAU"
-            alt="refresh"
-            id="refresh"
-            onClick="location.reload()"
-          />
+        <div
+          className="col-3 refresh"
+          onClick={() => window.location.reload(false)}
+        >
+          🔄️
         </div>
       </div>
       <div className="info">
