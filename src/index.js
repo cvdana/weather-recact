@@ -9,7 +9,11 @@ root.render(
   <React.StrictMode>
     <App />
     <footer>
-      <a href="https://www.google.es/webhp?source=search_app&gfe_rd=cr&ei=2tfcVOu6IZKt8weG4oAY&gws_rd=ssl">
+      <a
+        href="https://github.com/cvdana/weather-recact"
+        target="blank"
+        rel="noreferrer"
+      >
         Open-source
       </a>{" "}
       project coded by Dana Visnitchi

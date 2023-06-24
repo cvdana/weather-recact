@@ -95,15 +95,6 @@ export default function Weather() {
       <hr />
       <div className="weatherForecast">
         <h4 className="dayForecast">7-Day Forecast</h4>
-        <div className="row">
-          <div className="col rounded-pill forecast"></div>
-          <div className="col rounded-pill forecast"></div>
-          <div className="col rounded-pill forecast"></div>
-          <div className="col rounded-pill forecast"></div>
-          <div className="col rounded-pill forecast"></div>
-          <div className="col rounded-pill forecast"></div>
-          <div className="col rounded-pill forecast"></div>
-        </div>
       </div>
     </div>
   );
