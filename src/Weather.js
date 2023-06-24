@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import "./Weather.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 export default function Weather() {
   function handleResponse(response) {
     alert(`Temperature in London is ${response.data.main.temp}`);
@@ -20,14 +21,14 @@ export default function Weather() {
   return (
     <div className="Weather">
       <div className="row seekBlock">
-        <div className="col">
+        <div className="col-3">
           <img
             className="location col"
             src="https://lh3.googleusercontent.com/Zf2589f7DDySbVIowuI6qEwGnlnT4x4Ob6_QdTB906wqmwMnSzMemWszOwQ4DOwCzVA8pVnntOkLD_tQf2DhIQsHQOwf04t6LAejH3G8"
-            alt="location pin"
+            alt="location"
           />
         </div>
-        <div className="col-3">
+        <div className="col-6">
           <form action="submit" id="search-form">
             <div className="p-1 bg-light rounded rounded-pill shadow-sm mb-1 searchBox">
               <div className="input-group">
@@ -50,7 +51,7 @@ export default function Weather() {
             </div>
           </form>
         </div>
-        <div className="col">
+        <div className="col-3">
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkFspT3qvVuwlqyCui0ufP_iTWFuxtMXxC2Q&usqp=CAU"
             alt="refresh"
@@ -71,19 +72,22 @@ export default function Weather() {
             className="mainIcon"
           />
         </div>
-        <h3>
-          <span>{weatherData.temperature}</span>
-          <small className="units"> ºC | F </small>
-        </h3>
-        <h4 className="condition">{weatherData.condition}</h4>
-        <div className="row row-cols-3 align-items-center extraInformation">
-          <h4 className="col-4 p-0 temperatures">
-            Feels like {weatherData.temperatureFeel}º
-          </h4>
-          <h4 className="col-4 p-0 humidity">
-            Humidity {weatherData.humidity}%
-          </h4>
-          <h4 className="col-4 p-0 wind"> Wind {weatherData.wind} Km/h</h4>
+        <div className="row text-center justify-content-center">
+          <div className="col-6">
+            <h3 className="col-6">
+              <span>{weatherData.temperature}</span>
+              <small className="units"> ºC | F </small>
+            </h3>
+            <div className="w-100"></div>
+            <h4 className="col-6 condition">{weatherData.condition}</h4>
+          </div>
+          <div className=" col-3 extraInformation">
+            <h4 className="temperatures">
+              Feels like {weatherData.temperatureFeel}º
+            </h4>
+            <h4 className=" humidity">Humidity {weatherData.humidity}%</h4>
+            <h4 className=" wind"> Wind {weatherData.wind} Km/h</h4>
+          </div>
         </div>
       </div>
       <hr />

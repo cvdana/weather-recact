@@ -1,16 +1,12 @@
 .Weather .info {
   text-align: center;
 }
-
 .Weather h2 {
   font-size: 20px;
 }
 .Weather h3 {
   font-size: 90px;
   padding: 0;
-  position: relative;
-  top: -136px;
-  left: 183px;
 }
 
 .Weather h3 small {
@@ -21,19 +17,10 @@
 }
 .Weather h4.condition {
   text-transform: capitalize;
-  position: relative;
-  top: -148px;
-  left: 177px;
 }
 .Weather h4.dayForecast {
   font-size: 20px;
   padding-left: 20px;
-}
-
-.Weather .extraInformation {
-  position: relative;
-  top: -130px;
-  text-align: center;
 }
 
 .Weather .mainIcon {
@@ -59,16 +46,14 @@
   margin: 10px auto;
 }
 
-.Weather .seekBlock .col,
-.seekBlock .col-9 {
-  padding: 0;
+.Weather .seekBlock {
+  margin-top: 10px;
 }
 .Weather .searchBox {
   margin: 0 20px;
 }
 .Weather .searchBar {
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
+  border-radius: 15px;
   background: none;
   outline: none;
   float: left;
