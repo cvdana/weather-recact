@@ -1,3 +1,7 @@
+.App {
+  max-width: 700px;
+  margin: 20px auto;
+}
 .App h1,
 .App h2,
 .App h3,
@@ -7,4 +11,5 @@
 }
 .App footer {
   text-align: center;
+  font-size: 15px;
 }
