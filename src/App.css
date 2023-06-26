@@ -1,14 +1,10 @@
-.App {
-  max-width: 700px;
-  margin: 20px auto;
-  border-radius: 5%;
-  border: solid 2px rgba(17, 13, 13, 0.5);
-  background-color: pink;
-}
 .App h1,
 .App h2,
 .App h3,
 .App h4 {
   font-family: "Lora", serif;
   color: #fff;
+}
+.App footer {
+  text-align: center;
 }

@@ -25,13 +25,13 @@ export default function Weather() {
         <div className="col-3 location">📍</div>
         <div className="col-6">
           <form action="submit" id="search-form">
-            <div className="p-1 bg-light rounded rounded-pill shadow-sm mb-1 searchBox">
+            <div className="p-1 bg-light rounded rounded-pill shadow-sm searchBox">
               <div className="input-group">
                 <input
                   type="search"
                   placeholder="Search City"
                   aria-describedby="button-addon1"
-                  className="form-control border-0 bg-ligh searchBar"
+                  className="form-control border-0 bg-ligh rounded rounded-pill searchBar"
                 />
                 <div className="input-group-append">
                   <button

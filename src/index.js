@@ -8,16 +8,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
-    <footer>
-      <a
-        href="https://github.com/cvdana/weather-recact"
-        target="blank"
-        rel="noreferrer"
-      >
-        Open-source
-      </a>{" "}
-      project coded by Dana Visnitchi
-    </footer>
   </React.StrictMode>
 );
 
