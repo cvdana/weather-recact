@@ -1,5 +1,9 @@
 import React from "react";
 import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRotate } from "@fortawesome/free-solid-svg-icons";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlassLocation } from "@fortawesome/free-solid-svg-icons";
 import "./Weather.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -22,7 +26,13 @@ export default function Weather() {
   return (
     <div className="Weather">
       <div className="row justify-content-center seekBlock">
-        <div className="col-3 location">📍</div>
+        <div className="col-3 mt-2 location">
+          <FontAwesomeIcon
+            icon={faLocationDot}
+            size="2xl"
+            style={{ color: "#ffffff" }}
+          />
+        </div>
         <div className="col-6">
           <form action="submit" id="search-form">
             <div className="p-1 bg-light rounded rounded-pill shadow-sm searchBox">
@@ -39,7 +49,11 @@ export default function Weather() {
                     type="submit"
                     className="btn btn-link text-primary searchButton"
                   >
-                    Search
+                    <FontAwesomeIcon
+                      icon={faMagnifyingGlassLocation}
+                      size="xl"
+                      style={{ color: "#c8cfda" }}
+                    />
                   </button>
                 </div>
               </div>
@@ -47,10 +61,14 @@ export default function Weather() {
           </form>
         </div>
         <div
-          className="col-3 refresh"
+          className="col-3 mt-2  refresh"
           onClick={() => window.location.reload(false)}
         >
-          🔄️
+          <FontAwesomeIcon
+            icon={faRotate}
+            size="2xl"
+            style={{ color: "#fff" }}
+          />
         </div>
       </div>
       <div className="info">
