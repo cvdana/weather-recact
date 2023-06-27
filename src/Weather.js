@@ -18,6 +18,7 @@ export default function Weather() {
       humidity: response.data.temperature.humidity,
       description: response.data.condition.description,
       city: response.data.city,
+      icon: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png`,
     });
     setReady(true);
   }
@@ -78,8 +79,8 @@ export default function Weather() {
         <div className="weather box">
           <div className=" frame">
             <img
-              src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-              alt="sun"
+              src={weatherData.icon}
+              alt={weatherData.description}
               className="mainIcon"
             />
           </div>
