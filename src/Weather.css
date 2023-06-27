@@ -43,10 +43,9 @@
 }
 .Weather .mainIcon {
   display: block;
-  height: 160px;
   width: 160px;
+  scale: 130%;
   margin: 0 auto;
-  padding-top: 10px;
 }
 
 .Weather .seekBlock {
