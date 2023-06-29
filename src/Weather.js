@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRotate } from "@fortawesome/free-solid-svg-icons";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
@@ -19,6 +20,7 @@ export default function Weather() {
       description: response.data.condition.description,
       city: response.data.city,
       icon: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png`,
+      date: new Date(response.data.time * 1000),
     });
     setReady(true);
   }
@@ -74,7 +76,9 @@ export default function Weather() {
         </div>
         <div className="info">
           <h1>{weatherData.city}</h1>
-          <h2>Fri,21st June 2023, 14:20</h2>
+          <h2>
+            <FormattedDate date={weatherData.date} />
+          </h2>
         </div>
         <div className="weather box">
           <div className=" frame">
