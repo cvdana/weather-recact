@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import FormattedDate from "./FormattedDate";
+import WeatherInfo from "./WeatherInfo";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRotate } from "@fortawesome/free-solid-svg-icons";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
@@ -74,49 +75,7 @@ export default function Weather() {
             />
           </div>
         </div>
-        <div className="info">
-          <h1>{weatherData.city}</h1>
-          <h2>
-            <FormattedDate date={weatherData.date} />
-          </h2>
-        </div>
-        <div className="weather box">
-          <div className=" frame">
-            <img
-              src={weatherData.icon}
-              alt={weatherData.description}
-              className="mainIcon"
-            />
-          </div>
-          <div className="row justify-content-center">
-            <div className="col-4 text-center maintemp">
-              <h3 className="col">
-                <span>{Math.round(weatherData.temperature)}</span>
-                <small className="units">º C | F </small>
-              </h3>
-              <div className="w-100"></div>
-              <h4 className="col condition">{weatherData.description}</h4>
-            </div>
-            <div className=" col-3 extraInformation">
-              <h4 className="details">DETAILS</h4>
-              <hr />
-              <h4 className="temperatures">
-                Feels like {Math.round(weatherData.feels)}º
-              </h4>
-              <h4 className=" humidity">
-                Humidity {Math.round(weatherData.humidity)}%
-              </h4>
-              <h4 className=" wind">
-                {" "}
-                Wind {Math.round(weatherData.wind)} Km/h
-              </h4>
-            </div>
-          </div>
-        </div>
-        <hr />
-        <div className="weatherForecast">
-          <h4 className="dayForecast">7-Day Forecast</h4>
-        </div>
+        <WeatherInfo data={weatherData} />
       </div>
     );
   } else {
