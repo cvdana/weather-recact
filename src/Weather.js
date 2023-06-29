@@ -21,7 +21,7 @@ export default function Weather(props) {
       humidity: response.data.temperature.humidity,
       description: response.data.condition.description,
       city: response.data.city,
-      icon: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png`,
+      icon: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`,
       date: new Date(response.data.time * 1000),
     });
     setReady(true);
