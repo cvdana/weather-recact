@@ -9,7 +9,8 @@ import { faMagnifyingGlassLocation } from "@fortawesome/free-solid-svg-icons";
 import "./Weather.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-export default function Weather() {
+export default function Weather(props) {
+  const [city, setCity] = useState(props.defaultCity);
   const [ready, setReady] = useState(false);
   const [weatherData, setWeatherData] = useState({});
   function handleResponse(response) {
@@ -25,7 +26,19 @@ export default function Weather() {
     });
     setReady(true);
   }
-
+  function search() {
+    const apiKey = `94413t4dbc141o4dc71ce00caf84f31e`;
+    const units = `metric`;
+    const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
   if (ready) {
     return (
       <div className="Weather">
@@ -38,7 +51,7 @@ export default function Weather() {
             />
           </div>
           <div className="col-6">
-            <form action="submit" id="search-form">
+            <form action="submit" onSubmit={handleSubmit}>
               <div className="p-1 bg-light rounded rounded-pill shadow-sm searchBox">
                 <div className="input-group">
                   <input
@@ -46,6 +59,7 @@ export default function Weather() {
                     placeholder="Search City"
                     aria-describedby="button-addon1"
                     className="form-control border-0 bg-ligh rounded rounded-pill searchBar"
+                    onChange={handleCityChange}
                   />
                   <div className="input-group-append">
                     <button
@@ -79,12 +93,7 @@ export default function Weather() {
       </div>
     );
   } else {
-    const apiKey = `94413t4dbc141o4dc71ce00caf84f31e`;
-    const city = `London`;
-    const units = `metric`;
-    const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
-    axios.get(apiUrl).then(handleResponse);
-
+    search();
     return "Loading..";
   }
 }
