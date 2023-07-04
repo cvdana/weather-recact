@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRotate } from "@fortawesome/free-solid-svg-icons";
@@ -15,6 +16,7 @@ export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({});
   function handleResponse(response) {
     setWeatherData({
+      coordinates: response.data.coordinates,
       temperature: response.data.temperature.current,
       feels: response.data.temperature.feels_like,
       wind: response.data.wind.speed,
@@ -90,6 +92,7 @@ export default function Weather(props) {
           </div>
         </div>
         <WeatherInfo data={weatherData} />
+        <WeatherForecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
