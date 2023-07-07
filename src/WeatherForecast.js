@@ -14,7 +14,14 @@ export default function WeatherForecast(props) {
     setForecast(response.data.daily);
     setLoaded(true);
   }
-
+  function load() {
+    const apiKey = `94413t4dbc141o4dc71ce00caf84f31e`;
+    const longitude = props.coordinates.longitude;
+    const latitude = props.coordinates.latitude;
+    const units = `metric`;
+    const apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(handleResponse);
+  }
   if (loaded) {
     return (
       <div className="WeatherForecast">
@@ -22,7 +29,7 @@ export default function WeatherForecast(props) {
           {forecast.map((dailyForecast, index) => {
             return (
               <div className="col" key={index}>
-                <WeatherForecastDay data={dailyForecast} />
+                <WeatherForecastDay data={dailyForecast} units="celsius" />
               </div>
             );
           })}
@@ -30,12 +37,7 @@ export default function WeatherForecast(props) {
       </div>
     );
   } else {
-    const apiKey = `94413t4dbc141o4dc71ce00caf84f31e`;
-    const longitude = props.coordinates.longitude;
-    const latitude = props.coordinates.latitude;
-    const units = `metric`;
-    const apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=${units}`;
-    axios.get(apiUrl).then(handleResponse);
+    load();
     return null;
   }
 }
