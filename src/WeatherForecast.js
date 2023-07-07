@@ -29,10 +29,7 @@ export default function WeatherForecast(props) {
           {forecast.map((dailyForecast, index) => {
             return (
               <div className="col" key={index}>
-                <WeatherForecastDay
-                  data={dailyForecast}
-                  units={props.celsius}
-                />
+                <WeatherForecastDay data={dailyForecast} />
               </div>
             );
           })}

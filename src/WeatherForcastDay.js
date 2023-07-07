@@ -28,7 +28,7 @@ export default function WeatherForecastDay(props) {
     const days = [`Sun`, `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, `Sat`];
     return days[day];
   }
-  if (props.celsius) {
+  if (props.unit === `celsius`) {
     return (
       <div>
         <div className="WeatherForecast-day">{day()}</div>
