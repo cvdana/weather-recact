@@ -49,6 +49,7 @@
 
 .Weather .seekBlock {
   margin: 10px;
+  background-color: transparent;
 }
 
 .Weather .searchBar {
@@ -59,7 +60,7 @@
   color: #060606;
   font-size: 16px;
   line-height: 29px;
-  background-color: #fff;
+  background-color: transparent;
   border: #fff;
 }
 .Weather .searchButton img {
