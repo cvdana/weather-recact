@@ -57,11 +57,8 @@
   background: none;
   outline: none;
   float: left;
-  color: #060606;
   font-size: 16px;
   line-height: 29px;
-  background-color: transparent;
-  border: #fff;
 }
 .Weather .searchButton img {
   width: 25px;
@@ -93,5 +90,9 @@
   .Weather h4.humidity,
   .Weather h4.wind {
     font-size: 15px;
+  }
+  .Weather .weatherForecast {
+    border-top: 2px solid #005086;
+    border-radius: 80px;
   }
 }

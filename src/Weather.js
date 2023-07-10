@@ -49,7 +49,7 @@ export default function Weather(props) {
             <FontAwesomeIcon
               icon={faLocationDot}
               size="2xl"
-              style={{ color: "#ffffff" }}
+              style={{ color: "#005086" }}
             />
           </div>
           <div className="col-6">
@@ -87,7 +87,7 @@ export default function Weather(props) {
             <FontAwesomeIcon
               icon={faRotate}
               size="2xl"
-              style={{ color: "#fff" }}
+              style={{ color: "#005086" }}
             />
           </div>
         </div>
