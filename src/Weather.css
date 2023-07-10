@@ -89,4 +89,9 @@
   .Weather hr {
     display: none;
   }
+  .Weather h4.temperatures,
+  .Weather h4.humidity,
+  .Weather h4.wind {
+    font-size: 15px;
+  }
 }
