@@ -85,3 +85,8 @@
   color: #fff;
   margin: 6px 0;
 }
+@media (max-width: 760px) {
+  .Weather hr {
+    display: none;
+  }
+}
