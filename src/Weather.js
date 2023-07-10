@@ -68,13 +68,13 @@ export default function Weather(props) {
           </div>
           <div className="col-6">
             <form action="submit" onSubmit={handleSubmit}>
-              <div className="p-1 bg-light rounded rounded-pill shadow-sm searchBox">
+              <div className="p-1 bg-transparent border border-warning rounded rounded-pill shadow-sm searchBox">
                 <div className="input-group">
                   <input
                     type="search"
                     placeholder="Search City"
                     aria-describedby="button-addon1"
-                    className="form-control border-0 bg-ligh rounded rounded-pill searchBar"
+                    className="form-control border-0  bg-transparent rounded rounded-pill searchBar"
                     onChange={handleCityChange}
                   />
                   <div className="input-group-append">
@@ -86,7 +86,7 @@ export default function Weather(props) {
                       <FontAwesomeIcon
                         icon={faMagnifyingGlassLocation}
                         size="xl"
-                        style={{ color: "#c8cfda" }}
+                        style={{ color: "#005086" }}
                       />
                     </button>
                   </div>
